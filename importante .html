@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje de Perdón</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            margin: 0;
+            animation: backgroundFade 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes backgroundFade {
+            0% {
+                background-color: #f4f4f4;
+            }
+            100% {
+                background-color: #ffe4e1;
+            }
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #ff6f61;
+            font-family: 'Amatic SC', cursive;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+            text-align: right;
+        }
+
+        .signature strong {
+            font-family: 'Amatic SC', cursive;
+            font-size: 24px;
+            color: #ff6f61;
+        }
+
+        .heart {
+            display: block;
+            margin: 20px auto;
+            width: 80px;
+            height: 80px;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+            background-size: cover;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Ajustes para pantallas más pequeñas */
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 36px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .heart {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mi Chiquita Hermosa,</h1>
+        <p>
+            Quiero comenzar pidiéndote perdón desde lo más profundo de mi corazón. Sé que cometí un error y que mis acciones te lastimaron. No fue mi intención hacerte daño, y ahora me doy cuenta de lo importante que es nuestra relación para mí.
+        </p>
+        <p>
+            A veces, nuestras emociones nos juegan malas pasadas, y aunque no es excusa, quiero que sepas que estoy reflexionando sobre lo que pasó. Me duele pensar que te hice sentir mal, y estoy comprometido a mejorar y aprender de esto.
+        </p>
+        <p>
+            Espero que puedas darme la oportunidad de arreglar las cosas, porque valoro mucho lo que tenemos y no quiero perderlo. Me importas demasiado como para dejar que un malentendido o un error nos separe.
+        </p>
+        <p>
+            De verdad, lo siento. ¿Me perdonas?
+        </p>
+        <div class="signature">
+            Con cariño,<br>
+            <strong>Adrián</strong>
+        </div>
+        <div class="heart"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.querySelector('.container').style.display = 'block';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
